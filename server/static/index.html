@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pumpin Dashboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="brand">
+        <span class="dot"></span>
+        <h1>Pumpin</h1>
+        <p class="subtitle">Digital Being powered by the Pippin Framework</p>
+      </div>
+      <div class="actions">
+        <button id="btnPing">Ping</button>
+        <button id="btnMemory">Fetch Memory</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="card">
+        <h2>Status</h2>
+        <div class="row">
+          <span class="label">Runtime</span>
+          <span id="statusRuntime" class="value">Offline</span>
+        </div>
+        <div class="row">
+          <span class="label">Agent</span>
+          <span id="statusAgent" class="value">Pumpin</span>
+        </div>
+        <div class="row">
+          <span class="label">Last Response</span>
+          <span id="statusLast" class="value muted">None yet</span>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Memory</h2>
+        <div id="memoryList" class="memory"></div>
+      </section>
+
+      <section class="card">
+        <h2>Console</h2>
+        <pre id="console" class="console">
