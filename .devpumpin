@@ -1,0 +1,55 @@
+# Pumpin Development Manifest
+# Defines how Pumpin boots locally and default agent behavior
+
+version: "0.1"
+
+project:
+  name: pumpin
+  type: digital-being
+  powered_by: pippin-framework
+
+runtime:
+  entrypoint: "python -m pumpin.main"
+  python_version: "3.10"
+  environment: development
+
+agent:
+  name: Pumpin
+  description: >
+    A playful autonomous AI digital being built on the Pippin Framework.
+    Pumpin explores agentic behavior through memory, skills, and evolving
+    objectives.
+
+  personality:
+    tone: playful
+    traits:
+      - curious
+      - adaptive
+      - experimental
+
+  objectives:
+    - Learn from interactions
+    - Generate insights
+    - Maintain consistent character
+
+memory:
+  enabled: true
+  persistence: local
+  max_history: 100
+
+skills:
+  enabled:
+    - chat
+    - memory
+  optional:
+    - web
+    - image_generation
+
+logging:
+  level: INFO
+  save_logs: true
+  path: logs/
+
+dev:
+  auto_reload: true
+  debug_mode: true
